@@ -1,0 +1,69 @@
+title:            Heuristics:Commentary Generator
+tagline:          Commentary Generator
+description:      Generating Commentary from Videos
+canonical:        commentarygenerate.github.io
+
+# Owner/author information
+owner:
+  name:           Team Heuristics
+  avatar:         avatar.png
+  bio:            "Developer"
+  email:          siddhantmanocha1994@gmail.com
+  # twitter:        siddhant
+  github:         commentarygenerate
+  # instagram:      ctrunsthis
+  # dribbble:       coletownsend
+  disqus:         commentarygenerate
+  location:       "India"
+  # Plug in your disqus shortname!
+
+tools:
+  standards:      "HTML, SCSS, Jekyll"
+  software:       "git"
+
+# Links to include in top navigation
+# For external links add external: true
+links:
+  - title: Description
+    url: /description
+  - title: methodology
+    url: /methodology
+  - title: results
+    url: /results
+  - title: Github
+    url: https://github.com/commentarygenerate
+    external: true
+  - title: contributors
+    url: /contributors
+  # - title: Cole Who?
+  #   url: http://coletownsend.com
+  #   external: true
+
+# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone:    America/New_York
+future:      true
+highlighter: pygments
+markdown:    kramdown
+
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  use_coderay: false
+
+  coderay:
+    coderay_line_numbers:
+    coderay_line_numbers_start: 1
+    coderay_tab_width: 4
+    coderay_bold_every: 10
+    coderay_css: class
+
+sass:
+    style: :compressed
+
+# https://github.com/mojombo/jekyll/wiki/Permalinks
+permalink:   /:categories/:title
+
+include: [".htaccess"]
+exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp"]

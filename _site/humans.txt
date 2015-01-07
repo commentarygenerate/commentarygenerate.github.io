@@ -1,0 +1,14 @@
+/* TEAM */
+Creator: Team Heuristics
+Contact: siddhantmanocha1994@gmail.com
+Twitter: 
+Location: India
+                           
+/* THANKS */                           
+Creator of Balzac theme: Cole Townsend
+Twitter: @twnsndco
+
+/* SITE */                         
+Last update: 2015-01-07
+Standards: HTML, SCSS, Jekyll                        
+Software: git
