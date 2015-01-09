@@ -1,13 +1,61 @@
 ---
-layout: post
+layout: post_without_image
 permalink: /results/index.html
 title: Results
-description: To be updated
+<!-- description: To be updated -->
 tags: [results, commentary,generator]
-image:
-  feature: soft-trees.jpg
+
+
+<!-- image:
+  feature: soft-trees.jpg -->
 ---
 
+### Court Detection
+
+<!-- | <img src="/images/ano1.jpg" alt="Reduced Problem Statement" style="width:70%">  |<img src="/images/ano1.jpg" alt="Reduced Problem Statement" style="width:70%"> | 
+|:-----------------:|:-----------:|
+| Akshay Varun              | SatyaNarayana |  -->
+
+<img src="/images/i1.png" alt="Reduced Problem Statement" style="width:100%">
+
+
+
+<!-- | <img src="/images/ano1.jpg" alt="Reduced Problem Statement" style="width:70%">  |<img src="/images/ano1.jpg" alt="Reduced Problem Statement" style="width:70%"> | 
+|:-----------------:|:-----------:|
+| Akshay Varun              | SatyaNarayana |  -->
+
+
+
+### Object Detection
+
+<!-- | <img src="/images/ano1.jpg" alt="Reduced Problem Statement" style="width:70%">  |<img src="/images/ano1.jpg" alt="Reduced Problem Statement" style="width:70%"> | <img src="/images/ano1.jpg" alt="Reduced Problem Statement" style="width:70%">| 
+|:-----------------:|:-----------:|:-----------:|
+| Akshay Varun              | SatyaNarayana |SatyaNarayana | -->  
+
+<img src="/images/i3.png" alt="Reduced Problem Statement" style="width:100%">
+
+
+### Action Detection
+
+<img src="/images/zen.png" alt="Reduced Problem Statement" style="width:90%">  
+
+### Ball Tracking
+
+<!-- | <img src="/images/ano1.jpg" alt="Reduced Problem Statement" style="width:70%">  |<img src="/images/ano1.jpg" alt="Reduced Problem Statement" style="width:70%"> | <img src="/images/ano1.jpg" alt="Reduced Problem Statement" style="width:70%">| <img src="/images/ano1.jpg" alt="Reduced Problem Statement" style="width:70%">|
+|:-----------------:|:-----------:|:-----------:|:-----------:|
+| Akshay Varun              | SatyaNarayana |SatyaNarayana | SatyaNarayana | -->
+
+
+<img src="/images/i6.png" alt="Reduced Problem Statement" style="width:90%">  
+
+
+### Sound Analysis
+
+<img src="/images/wokay.png" alt="Reduced Problem Statement" style="width:90%">  
+
+### Commentary Generation
+
+<img src="/images/i5.png" alt="Reduced Problem Statement" style="width:60%">  
 
 
 

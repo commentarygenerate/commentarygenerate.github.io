@@ -1,12 +1,31 @@
 ---
-layout: post
+layout: post_without_image
 permalink: /contributors/index.html
 title: Contributors
-description: To be updated
+<!-- description: To be updated -->
 tags: [contributors, commentary,generator]
-image:
-  feature: soft-trees.jpg
+<!-- image:
+  feature: soft-trees.jpg -->
 ---
+
+| <img src="/images/ano1.jpg" alt="Reduced Problem Statement" style="width:70%">  |<img src="/images/ano1.jpg" alt="Reduced Problem Statement" style="width:70%"> | 
+|:-----------------:|:-----------:|
+| Akshay Varun              | SatyaNarayana | 
+|:-----------------:|:-----------:|
+| PESIT,Bangalore              | IIT Guwhati | 
+
+
+
+| <img src="/images/ano1.jpg" alt="Reduced Problem Statement" style="width:70%">  |<img src="/images/ano1.jpg" alt="Reduced Problem Statement" style="width:70%"> | 
+|:-----------------:|:-----------:|
+| Siddhant Manocha              |Vanya Jauhal | 
+|:-----------------:|:-----------:|
+| IIT Kanpur              |IIT Hyderabad | 
+
+
+
+
+
 
 
 

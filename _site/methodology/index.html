@@ -1,14 +1,12 @@
-<!doctype html>
-<html lang="en">
 <meta charset="utf-8">
 <title>Methodology &#8211; Heuristics:Commentary Generator</title>
-<meta name="description" content="To be updated">
+<meta name="description" content="Approach">
 <meta name="keywords" content="methodology, commentary, generator">
 
 
 <meta property="og:locale" content="en_US">
 <meta property="og:title" content="Methodology &#8211; Heuristics:Commentary Generator">
-<meta property="og:description" content="To be updated">
+<meta property="og:description" content="Approach">
 <meta property="og:url" content="/methodology/index.html">
 <meta property="og:site_name" content="Heuristics:Commentary Generator">
 
@@ -50,7 +48,7 @@
 
 <div id="bump">
   <body class="">
-    <header class="site-header">
+    <header class="site-header darken">
       <div class="wrap">
         <hgroup>
           <h1><a href="/">Heuristics:Commentary Generator</a></h1>
@@ -83,10 +81,8 @@
 <section class="article">
 
 
-  <div class="overlay"></div>
-  
-  <div class="featured-image" style="background-image: url(/images/soft-trees.jpg)"></div>
-  
+  <!-- <div class="overlay"></div>
+  <div class="featured-image" style="background-image: url(/images/typewriter.jpg)"></div> -->
 
 
 
@@ -95,11 +91,41 @@
           <hgroup>
             <h1>Methodology</h1>
             <p class="date"></p>
-            <p class="intro">To be updated</p>
+            <p class="intro">Approach</p>
           </hgroup>
         </header>
 
-        <!-- ### Features
+        <p>Owing to the complexity of the problem statement, we aim at a simpler problem statement. Since the action, the objects and the sound captures the essence of the entire tennis match video, we inspect each of the problem statement seperately and try to make inferences out of it. Once efficient results can be obtained for the individual parts, we can combine them to render an efficient end to end system.</p>
+
+<p><img src="/images/simple.png" alt="Reduced Problem Statement" style="width:60%" /></p>
+
+<h4 style="text-align:center"><b>Appraoch</b></h4>
+<!-- ![Reduced Problem Statement](/images/simple.png )
+
+![Reduced Problem Statement](/images/pr_2.png )
+ -->
+
+<p><img src="/images/pr_2.png" alt="Reduced Problem Statement" style="width:60%;" /></p>
+
+<h4 style="text-align:center"><b>Reduced Problem Statement</b></h4>
+
+<h3 id="work-flow">Work Flow</h3>
+
+<p>We consider a modular approach to the problem and the solution has the following major components:</p>
+
+<ul>
+  <li>Tennis Court Detection (Applied Homographic and Hough Transforms)</li>
+  <li>Object Detection (Applied Regions with Convoluted Neural Networks (RCNN))</li>
+  <li>Action Recognition (Applied SVM (classifier) to extracted HOF features)</li>
+  <li>Ball Tracking (Optical Flow)</li>
+  <li>Sound Analysis (Naive Bayes Classifier on sound features)</li>
+</ul>
+
+<p><img src="/images/flow.png" alt="Reduced Problem Statement" style="width:100%" /></p>
+
+<h4 style="text-align:center"><b>Work Flow</b></h4>
+
+<!-- ### Features
 * flexible, uses max-width for responsive goodness
 * responsive drop down menu
 * retina images using @2x
