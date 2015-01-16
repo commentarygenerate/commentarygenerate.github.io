@@ -6,27 +6,19 @@
 
     
     <url>
-        <loc>/articles/testpost</loc>
+        <loc>/articles/rcnn3</loc>
     </url>
     
     <url>
-        <loc>/articles/test-post</loc>
+        <loc>/articles/rcnn2</loc>
+    </url>
+    
+    <url>
+        <loc>/articles/rcnn</loc>
     </url>
     
     <url>
         <loc>/articles/the-little-prince</loc>
-    </url>
-    
-    <url>
-        <loc>/articles/post-with-figure</loc>
-    </url>
-    
-    <url>
-        <loc>/articles/post-with-feature</loc>
-    </url>
-    
-    <url>
-        <loc>/articles/longform-post</loc>
     </url>
     
 </urlset>

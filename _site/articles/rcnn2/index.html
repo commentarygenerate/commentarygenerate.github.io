@@ -1,13 +1,15 @@
+
+
 <meta charset="utf-8">
-<title>Detailed Description &#8211; Heuristics:Commentary Generator</title>
-<meta name="description" content="Problem Statement">
-<meta name="keywords" content="description, Jekyll, theme, responsive">
+<title>Caffe with RCNN Installation &#8211; Heuristics:Commentary Generator</title>
+<meta name="description" content="How to install caffe with rcnn on a GPU without root access!">
+<meta name="keywords" content="">
 
 
 <meta property="og:locale" content="en_US">
-<meta property="og:title" content="Detailed Description &#8211; Heuristics:Commentary Generator">
-<meta property="og:description" content="Problem Statement">
-<meta property="og:url" content="/description/index.html">
+<meta property="og:title" content="Caffe with RCNN Installation &#8211; Heuristics:Commentary Generator">
+<meta property="og:description" content="How to install caffe with rcnn on a GPU without root access!">
+<meta property="og:url" content="/articles/rcnn2">
 <meta property="og:site_name" content="Heuristics:Commentary Generator">
 
 
@@ -78,61 +80,55 @@
     </header>
 
 
-<section class="article">
+<section class="article pad-top">
 
-
-  <!-- <div class="overlay"></div>
-  <div class="featured-image" style="background-image: url(/images/typewriter.jpg)"></div> -->
 
 
 
       <article class="wrap post">
         <header class="post-header">
           <hgroup>
-            <h1>Detailed Description</h1>
-            <p class="date"></p>
-            <p class="intro">Problem Statement</p>
+            <h1>Caffe with RCNN Installation</h1>
+            <p class="date">Jan 17, 2015</p>
+            <p class="intro">How to install caffe with rcnn on a GPU without root access!</p>
           </hgroup>
         </header>
 
-        <h4 id="aim-given-a-video-of-a-tennis-match-we-aim-at-automating-commentary-generation-without-human-intervention">Aim: Given a video of a tennis match, we aim at automating commentary generation without human intervention.</h4>
+        <p>Caffe is the deep learning framework created by a Phd student at UC Berkeley. It is well documented and has easy installation instructions. Information on the framework can be found at http://caffe.berkeleyvision.org/ . But we had a different problem altogether. We were not provided sudo access on the GPU. As a results we cannot install any software as a root user. Fortunately, most of the dependencies as Blas, Open CV, Cuda libraries, etc were already installed. Three of the dependencies namely glog, gflag, lmdb were not installed and had to be installed from the source files. This took some time but was figured out.</p>
 
-<p><img src="/images/pr_3.png" alt="Problem Statement" /></p>
+<p>A lot of libraries were depreciated and required some workaround. Most of such errors were rectified step by step. We ran the installer and tried to correct the errors thrown during the installation. this required us to locate the new names for the missing files and via <code>locate</code> command in linux and link them to the correct parh via <code>ln -s destination source</code>.</p>
 
-<!-- ![input](/images/pr_1.png) | | ![output](/images/pr_3.png) | 
-Input | | Output
+<p>We used Anaconda for the python dependencies and this required us to include google.protobuf in python sys.path (search it present as installation of python 2.7 generally) which was shown to be missing. the issues page on github repositories provided of specific help for example: one such instance required us to rename the libm.so file in the lib folder in the anaconda python distribution.</p>
 
+<p>After caffe installation, the rcnn installation was pretty straightforward and we just cloned the repository and followed the steps mentioned.</p>
 
-![input](/images/pr_1.png) | | ![output](/images/pr_2.png) |  -->
-
-<h3 id="motivation">Motivation</h3>
-
-<p>An often-overlooked aspect of a successful video production is the audio.Surprisingly, even if the quality of the video images is poor, as long as the audio is of good quality, the video will still be watchable.A justification of the above fact is the role of good commentary in sports matches.A good commentary heightens the level of para social interaction between the players and the audience,help infer better conclusions about body language of the player and enhance our level of enjoyment. Our project attempts to generate commentary for sports matches automatically without human intervention.We use tennis as a prototype for our demonstration.We rely on sports specific factors such as the continuous video feed,motion of the ball,sound produced when the ball hits the racket,position of player with respect to the court,etc to make useful inferences and generate automated commentary. The project can be extended to generate a full match report capturing important events based on the commentary generated.The approach can be generalized to obtaining useful audio based output for any video input given sufficient information of important video characteristics.</p>
-
-<!-- ### Features
-* jfdbvjv
-* jdhboigrlknh
-* jgbirjtht
-* ,mfdbgrjb
-* kfnhbigthj
-
-### Acknowledgements
-I utilized my own HTML templates, but had no prior knowledge of liquid nor the required Jekyll system file format. I took [Michael Rose](http://twitter.com/mmistakes)'s theme [Minimal Mistakes](http://mmistakes.github.io/minimal-mistakes/). Having a prebuilt archive and the YAML front-matter already set up was a great help. 
-
- The lovely font shown here is Calendas. For full splendor on your blog, I suggest you [head over and buy that](http://calendasplus.com/). The full family is 3 weights and costs $3. Many thanks to Daniel Bruce for the wonderful Entypo icons. Those can be picked up at [entypo.com](http://entypo.com), but are included with the source files. It's also <b>retina ready</b> via retina.js. Check out how that works over at [retinajs.com](http://retinajs.com).
-
-### The Name
-mdblgrk.n -->
+<p>After much effort, we were able to install the caffe framework with rcnn and we could run our first cnn( convoluted neural net) code for object detection.</p>
 
 
-      <a class="share" href="https://twitter.com/intent/tweet?text=&quot;Detailed Description&quot;%20commentarygenerate.github.io/description/index.html%20via%20&#64;" data-dnt="true">Share</a>
+
+      <a class="share" href="https://twitter.com/intent/tweet?text=&quot;Caffe with RCNN Installation&quot;%20commentarygenerate.github.io/articles/rcnn2%20via%20&#64;" data-dnt="true">Share</a>
       <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
       
+      <aside class="disqus">
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'commentarygenerate'; // required: replace example with your forum shortname
 
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      </aside>
+      
 
       </article>
-
     </section>
 </div>
 

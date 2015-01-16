@@ -5,7 +5,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="/feed.xml" />
 <link rel="alternate" type="text/html" href="" />
-<updated>2015-01-09T12:18:45-05:00</updated>
+<updated>2015-01-16T16:55:03-05:00</updated>
 <id>/</id>
 <author>
   <name>Team Heuristics</name>
@@ -15,79 +15,88 @@
 
 
 <entry>
-  <title type="html"><![CDATA[mf,bvflkj]]></title>
-  <link rel="alternate" type="text/html" href="/articles/testpost" />
-  <id>/articles/testpost</id>
-  <published>2014-08-05T00:00:00-04:00</published>
-  <updated>2014-08-05T00:00:00-04:00</updated>
+  <title type="html"><![CDATA[Kindly add your posts]]></title>
+  <link rel="alternate" type="text/html" href="/articles/rcnn3" />
+  <id>/articles/rcnn3</id>
+  <published>2015-01-17T00:00:00-05:00</published>
+  <updated>2015-01-17T00:00:00-05:00</updated>
   <author>
     <name>Team Heuristics</name>
     <uri></uri>
     <email>siddhantmanocha1994@gmail.com</email>
   </author>
-  <content type="html">&lt;p&gt;,mdbvifelvhbkes. mdbve&lt;/p&gt;
+  <content type="html">&lt;p&gt;I hereby request my fellow teammates Satya Narayana, Akshay Varun and Vanya Jauhal to add their blogs on the works they have been involved in to the website  :P&lt;/p&gt;
 
-&lt;h2 id=&quot;cupidatat-90s-lo-fi-authentic-try-hard&quot;&gt;Cupidatat 90’s lo-fi authentic try-hard&lt;/h2&gt;
+&lt;p&gt;More templates for the markdown files are present in the template folder.&lt;/p&gt;
 
-&lt;p&gt;In pug Portland incididunt mlkshk put a bird on it vinyl quinoa. Terry Richardson shabby chic +1, scenester Tonx excepteur tempor fugiat voluptate fingerstache aliquip nisi next level. Farm-to-table hashtag Truffaut, Odd Future ex meggings gentrify single-origin coffee try-hard 90’s. &lt;/p&gt;
+  &lt;p&gt;&lt;a href=&quot;/articles/rcnn3&quot;&gt;Kindly add your posts&lt;/a&gt; was originally published by Team Heuristics at &lt;a href=&quot;&quot;&gt;Heuristics:Commentary Generator&lt;/a&gt; on January 17, 2015.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Caffe with RCNN Installation]]></title>
+  <link rel="alternate" type="text/html" href="/articles/rcnn2" />
+  <id>/articles/rcnn2</id>
+  <published>2015-01-17T00:00:00-05:00</published>
+  <updated>2015-01-17T00:00:00-05:00</updated>
+  <author>
+    <name>Team Heuristics</name>
+    <uri></uri>
+    <email>siddhantmanocha1994@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;Caffe is the deep learning framework created by a Phd student at UC Berkeley. It is well documented and has easy installation instructions. Information on the framework can be found at http://caffe.berkeleyvision.org/ . But we had a different problem altogether. We were not provided sudo access on the GPU. As a results we cannot install any software as a root user. Fortunately, most of the dependencies as Blas, Open CV, Cuda libraries, etc were already installed. Three of the dependencies namely glog, gflag, lmdb were not installed and had to be installed from the source files. This took some time but was figured out.&lt;/p&gt;
+
+&lt;p&gt;A lot of libraries were depreciated and required some workaround. Most of such errors were rectified step by step. We ran the installer and tried to correct the errors thrown during the installation. this required us to locate the new names for the missing files and via &lt;code&gt;locate&lt;/code&gt; command in linux and link them to the correct parh via &lt;code&gt;ln -s destination source&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;We used Anaconda for the python dependencies and this required us to include google.protobuf in python sys.path (search it present as installation of python 2.7 generally) which was shown to be missing. the issues page on github repositories provided of specific help for example: one such instance required us to rename the libm.so file in the lib folder in the anaconda python distribution.&lt;/p&gt;
+
+&lt;p&gt;After caffe installation, the rcnn installation was pretty straightforward and we just cloned the repository and followed the steps mentioned.&lt;/p&gt;
+
+&lt;p&gt;After much effort, we were able to install the caffe framework with rcnn and we could run our first cnn( convoluted neural net) code for object detection.&lt;/p&gt;
+
+
+  &lt;p&gt;&lt;a href=&quot;/articles/rcnn2&quot;&gt;Caffe with RCNN Installation&lt;/a&gt; was originally published by Team Heuristics at &lt;a href=&quot;&quot;&gt;Heuristics:Commentary Generator&lt;/a&gt; on January 17, 2015.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Start of a Wonderful Experience]]></title>
+  <link rel="alternate" type="text/html" href="/articles/rcnn" />
+  <id>/articles/rcnn</id>
+  <published>2015-01-17T00:00:00-05:00</published>
+  <updated>2015-01-17T00:00:00-05:00</updated>
+  <author>
+    <name>Team Heuristics</name>
+    <uri></uri>
+    <email>siddhantmanocha1994@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;Last year I visited the CMU-NITK Winter School organised by Carnegie Mellon University at National Institute of Technology, Karnataka. It was a wonderful opportunity and exposed me to large number of interestig topics in the field of machine learning.&lt;/p&gt;
+
+&lt;p&gt;The Winter School began on 10 December. After some introductory lectures, we were asked to brainstorm and come up with some interesting ideas that we would like to execute in a short span of just 15 days. This whole procedure was quite interesting and we considered a lot of interesting fields. We had a group of four team members each from different background. This was great as it exposed us to a realm of whole lot of new interesting ideas.&lt;/p&gt;
+
+&lt;p&gt;Despite the fact that we had only a span of 15 days for the project, we came up with a rather ambitious idea. We decided to make an application that can generate commentary for any match given just its video. This was an interesting problem and more importantly it was a great learning experience.&lt;/p&gt;
+
+&lt;p&gt;After some excellent guidance from the mentors, we were able to modularize the whole problem statement into discrete parts. Owing to the non availability of data, we restricted ourselves to generation of commentary for tennis matches. Given a video of a tennis match, we tried to find the key elements that can characterise the important information of the match. We divided the whole problem statement as:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Sartorial hoodie &lt;/li&gt;
-  &lt;li&gt;Labore viral forage&lt;/li&gt;
-  &lt;li&gt;Tote bag selvage &lt;/li&gt;
-  &lt;li&gt;DIY exercitation et id ugh tumblr church-key&lt;/li&gt;
+  &lt;li&gt;Court Detection&lt;/li&gt;
+  &lt;li&gt;Object Recognition&lt;/li&gt;
+  &lt;li&gt;Action Recognition&lt;/li&gt;
+  &lt;li&gt;Audio Analysis&lt;/li&gt;
+  &lt;li&gt;Ball tracking&lt;/li&gt;
+  &lt;li&gt;Commentary Generation&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Incididunt umami sriracha, ethical fugiat VHS ex assumenda yr irure direct trade. Marfa Truffaut bicycle rights, kitsch placeat Etsy kogi asymmetrical. Beard locavore flexitarian, kitsch photo booth hoodie plaid ethical readymade leggings yr.&lt;/p&gt;
+&lt;p&gt;We divided the task among the four team members and set on to our tasks individually. However, we had to face a lot of challenges in the early phase before we can formalise our approach. The major drawback  was the non availability of action labelled data for any sports dataset. We were not left with any other choice but to annotate data ourselves. We created a HTML 5 application utilising HTML 5 canvas that required the user to move around the rectangles, find the bounding box for the action region and label the corresponding part. I will try improving the code and provide it as an annotation tool as well share the annotated sports action dataset for tennis matches.&lt;/p&gt;
 
-&lt;p&gt;Aesthetic odio dolore, meggings disrupt qui readymade stumptown brunch Terry Richardson pour-over gluten-free. Banksy american apparel in selfies, biodiesel flexitarian organic meh wolf quinoa gentrify banjo kogi. Readymade tofu ex, scenester dolor umami fingerstache occaecat fashion axe Carles jean shorts minim. Keffiyeh fashion axe nisi Godard mlkshk dolore. Lomo you probably haven’t heard of them eu non, Odd Future Truffaut pug keytar meggings McSweeney’s Pinterest cred. Etsy literally aute esse, eu bicycle rights qui meggings fanny pack. Gentrify leggings pug flannel duis.&lt;/p&gt;
+&lt;p&gt;Next, we plunged to the job of object recognition. So we were discovered that  RCNN (Regions with Convoluted Neural Networks) gave pretty superior results for object recognition as compared to other techniques and had a pre trained model on imagenet dataset which can be used directly. Since running the code for required a GPU, we were fortunately provided GPU access from IIT Bombay. Thereafter this began the next challenging part, installation of caffe and rcnn toolbox on the GPU………………&lt;/p&gt;
 
-&lt;h2 id=&quot;forage-occaecat-cardigan-qui&quot;&gt;Forage occaecat cardigan qui&lt;/h2&gt;
-
-&lt;p&gt;Fashion axe hella gastropub lo-fi kogi 90’s aliquip +1 veniam delectus tousled. Cred sriracha locavore gastropub kale chips, iPhone mollit sartorial. Anim dolore 8-bit, pork belly dolor photo booth aute flannel small batch. Dolor disrupt ennui, tattooed whatever salvia Banksy sartorial roof party selfies raw denim sint meh pour-over. Ennui eu cardigan sint, gentrify iPhone cornhole. &lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Whatever velit occaecat quis deserunt gastropub, leggings elit tousled roof party 3 wolf moon kogi pug blue bottle ea. Fashion axe shabby chic Austin quinoa pickled laborum bitters next level, disrupt deep v accusamus non fingerstache.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Tote bag asymmetrical elit sunt. Occaecat authentic Marfa, hella McSweeney’s next level irure veniam master cleanse. Sed hoodie letterpress artisan wolf leggings, 3 wolf moon commodo ullamco. Anim occupy ea labore Terry Richardson. Tofu ex master cleanse in whatever pitchfork banh mi, occupy fugiat fanny pack Austin authentic. Magna fugiat 3 wolf moon, labore McSweeney’s sustainable vero consectetur. Gluten-free disrupt enim, aesthetic fugiat jean shorts trust fund keffiyeh magna try-hard.&lt;/p&gt;
-
-&lt;h2 id=&quot;hoodie-duis&quot;&gt;Hoodie Duis&lt;/h2&gt;
-
-&lt;p&gt;Actually salvia consectetur, hoodie duis lomo YOLO sunt sriracha. Aute pop-up brunch farm-to-table odio, salvia irure occaecat. Sriracha small batch literally skateboard. Echo Park nihil hoodie, aliquip forage artisan laboris. Trust fund reprehenderit nulla locavore. Stumptown raw denim kitsch, keffiyeh nulla twee dreamcatcher fanny pack ullamco 90’s pop-up est culpa farm-to-table. Selfies 8-bit do pug odio.&lt;/p&gt;
-
-&lt;h3 id=&quot;thundercats-ho&quot;&gt;Thundercats Ho!&lt;/h3&gt;
-
-&lt;p&gt;Fingerstache thundercats Williamsburg, deep v scenester Banksy ennui vinyl selfies mollit biodiesel duis odio pop-up. Banksy 3 wolf moon try-hard, sapiente enim stumptown deep v ad letterpress. Squid beard brunch, exercitation raw denim yr sint direct trade. Raw denim narwhal id, flannel DIY McSweeney’s seitan. Letterpress artisan bespoke accusamus, meggings laboris consequat Truffaut qui in seitan. Sustainable cornhole Schlitz, twee Cosby sweater banh mi deep v forage letterpress flannel whatever keffiyeh. Sartorial cred irure, semiotics ethical sed blue bottle nihil letterpress.&lt;/p&gt;
-
-&lt;p&gt;Occupy et selvage squid, pug brunch blog nesciunt hashtag mumblecore skateboard yr kogi. Ugh small batch swag four loko. Fap post-ironic qui tote bag farm-to-table american apparel scenester keffiyeh vero, swag non pour-over gentrify authentic pitchfork. Schlitz scenester lo-fi voluptate, tote bag irony bicycle rights pariatur vero Vice freegan wayfarers exercitation nisi shoreditch. Chambray tofu vero sed. Street art swag literally leggings, Cosby sweater mixtape PBR lomo Banksy non in pitchfork ennui McSweeney’s selfies. Odd Future Banksy non authentic.&lt;/p&gt;
-
-&lt;p&gt;Aliquip enim artisan dolor post-ironic. Pug tote bag Marfa, deserunt pour-over Portland wolf eu odio intelligentsia american apparel ugh ea. Sunt viral et, 3 wolf moon gastropub pug id. Id fashion axe est typewriter, mlkshk Portland art party aute brunch. Sint pork belly Cosby sweater, deep v mumblecore kitsch american apparel. Try-hard direct trade tumblr sint skateboard. Adipisicing bitters excepteur biodiesel, pickled gastropub aute veniam.&lt;/p&gt;
-
-  &lt;p&gt;&lt;a href=&quot;/articles/testpost&quot;&gt;mf,bvflkj&lt;/a&gt; was originally published by Team Heuristics at &lt;a href=&quot;&quot;&gt;Heuristics:Commentary Generator&lt;/a&gt; on August 05, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;/articles/rcnn&quot;&gt;Start of a Wonderful Experience&lt;/a&gt; was originally published by Team Heuristics at &lt;a href=&quot;&quot;&gt;Heuristics:Commentary Generator&lt;/a&gt; on January 17, 2015.&lt;/p&gt;</content>
 </entry>
 
 
 <entry>
-  <title type="html"><![CDATA[Test Post]]></title>
-  <link rel="alternate" type="text/html" href="/articles/test-post" />
-  <id>/articles/test-post</id>
-  <published>2013-08-17T00:00:00-04:00</published>
-  <updated>2013-08-17T00:00:00-04:00</updated>
-  <author>
-    <name>Team Heuristics</name>
-    <uri></uri>
-    <email>siddhantmanocha1994@gmail.com</email>
-  </author>
-  <content type="html">&lt;p&gt;This is a test&lt;/p&gt;
-
-
-  &lt;p&gt;&lt;a href=&quot;/articles/test-post&quot;&gt;Test Post&lt;/a&gt; was originally published by Team Heuristics at &lt;a href=&quot;&quot;&gt;Heuristics:Commentary Generator&lt;/a&gt; on August 17, 2013.&lt;/p&gt;</content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Image in Post]]></title>
+  <title type="html"><![CDATA[Template]]></title>
   <link rel="alternate" type="text/html" href="/articles/the-little-prince" />
   <id>/articles/the-little-prince</id>
   <published>2013-08-05T00:00:00-04:00</published>
@@ -101,151 +110,29 @@
 
 &lt;p&gt;&lt;img src=&quot;/images/money.jpg&quot; alt=&quot;Drawing A&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;In the book it said: “Boa constrictors swallow their prey whole, without
-chewing it. After that they are not able to move, and they sleep through the
-six months that they need for digestion.”&lt;/p&gt;
-
-&lt;p&gt;I pondered deeply, then, over the adventures of the jungle. And after some
-work with a colored pencil I succeeded in making my ﬁrst drawing. 
+&lt;p&gt;In the book it said: “Boa constrictors swallow their prey whole, without^M
+chewing it. After that they are not able to move, and they sleep through the^M
+six months that they need for digestion.”
+^M
+I pondered deeply, then, over the adventures of the jungle. And after some^M
+work with a colored pencil I succeeded in making my ﬁrst drawing.
 My Drawing Number One. It looked like this:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/sticker-mule.jpg&quot; alt=&quot;Drawing Number One&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/sticker-mule.jpg&quot; alt=&quot;Drawing Number One&quot; /&gt;
+^M
+I showed my masterpiece to the grown-ups, and asked them whether the^M
+drawing frightened them.
+^M
+But they answered: “Frighten? Why should any one be frightened by a^M
+hat?”
+^M
+My drawing was not a picture of a hat. It was a picture of a boa constrictor^M
+digesting an elephant. But since the grown-ups were not able to understand it,^M
+I made another drawing: I drew the inside of the boa constrictor, so that the^M
+grown-ups could see it clearly. They always need to have things explained.
+~                               &lt;/p&gt;
 
-&lt;p&gt;I showed my masterpiece to the grown-ups, and asked them whether the
-drawing frightened them.&lt;/p&gt;
-
-&lt;p&gt;But they answered: “Frighten? Why should any one be frightened by a
-hat?”&lt;/p&gt;
-
-&lt;p&gt;My drawing was not a picture of a hat. It was a picture of a boa constrictor
-digesting an elephant. But since the grown-ups were not able to understand it,
-I made another drawing: I drew the inside of the boa constrictor, so that the
-grown-ups could see it clearly. They always need to have things explained.&lt;/p&gt;
-
-  &lt;p&gt;&lt;a href=&quot;/articles/the-little-prince&quot;&gt;Image in Post&lt;/a&gt; was originally published by Team Heuristics at &lt;a href=&quot;&quot;&gt;Heuristics:Commentary Generator&lt;/a&gt; on August 05, 2013.&lt;/p&gt;</content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Post with Figure]]></title>
-  <link rel="alternate" type="text/html" href="/articles/post-with-figure" />
-  <id>/articles/post-with-figure</id>
-  <published>2013-08-05T00:00:00-04:00</published>
-  <updated>2013-08-05T00:00:00-04:00</updated>
-  <author>
-    <name>Team Heuristics</name>
-    <uri></uri>
-    <email>siddhantmanocha1994@gmail.com</email>
-  </author>
-  <content type="html">&lt;p&gt;This is a post that uses a &lt;code&gt;figure&lt;/code&gt;. It stacks these images and places a nice little caption below if you fill out &lt;code&gt;figcaption&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h3 id=&quot;single-image-figure&quot;&gt;Single Image Figure&lt;/h3&gt;
-
-&lt;figure&gt;
-	&lt;img src=&quot;http://farm9.staticflickr.com/8426/7758832526_cc8f681e48_c.jpg&quot; /&gt;
-	&lt;figcaption&gt;Morning Fog Emerging From Trees by A Guy Taking Pictures, on Flickr&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;figure&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;2&lt;/span&gt; 	&lt;span class=&quot;nt&quot;&gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;/images/image-filename-1.jpg&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;3&lt;/span&gt; 	&lt;span class=&quot;nt&quot;&gt;&amp;lt;figcaption&amp;gt;&lt;/span&gt;Caption describing these two images.&lt;span class=&quot;nt&quot;&gt;&amp;lt;/figcaption&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;lineno&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;/figure&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-  &lt;p&gt;&lt;a href=&quot;/articles/post-with-figure&quot;&gt;Post with Figure&lt;/a&gt; was originally published by Team Heuristics at &lt;a href=&quot;&quot;&gt;Heuristics:Commentary Generator&lt;/a&gt; on August 05, 2013.&lt;/p&gt;</content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[Post and Feature Image]]></title>
-  <link rel="alternate" type="text/html" href="/articles/post-with-feature" />
-  <id>/articles/post-with-feature</id>
-  <published>2013-08-05T00:00:00-04:00</published>
-  <updated>2013-08-05T00:00:00-04:00</updated>
-  <author>
-    <name>Team Heuristics</name>
-    <uri></uri>
-    <email>siddhantmanocha1994@gmail.com</email>
-  </author>
-  <content type="html">&lt;p&gt;“Whenever you feel like criticizing any one,” he told me, “just remember that all the people in this world haven’t had the advantages that you’ve had.”&lt;/p&gt;
-
-&lt;p&gt;He didn’t say any more, but we’ve always been unusually communicative in a reserved way, and I understood that he meant a great deal more than that. In consequence, I’m inclined to reserve all judgments, a habit that has opened up many curious natures to me and also made me the victim of not a few veteran bores. The abnormal mind is quick to detect and attach itself to this quality when it appears in a normal person, and so it came about that in college I was unjustly accused of being a politician, because I was privy to the secret griefs of wild, unknown men. Most of the confidences were unsought — frequently I have feigned sleep, preoccupation, or a hostile levity when I realized by some unmistakable sign that an intimate revelation was quivering on the horizon; for the intimate revelations of young men, or at least the terms in which they express them, are usually plagiaristic and marred by obvious suppressions. Reserving judgments is a matter of infinite hope. I am still a little afraid of missing something if I forget that, as my father snobbishly suggested, and I snobbishly repeat, a sense of the fundamental decencies is parcelled out unequally at birth.&lt;/p&gt;
-
-&lt;p&gt;And, after boasting this way of my tolerance, I come to the admission that it has a limit. Conduct may be founded on the hard rock or the wet marshes, but after a certain point I don’t care what it’s founded on. When I came back from the East last autumn I felt that I wanted the world to be in uniform and at a sort of moral attention forever; I wanted no more riotous excursions with privileged glimpses into the human heart. Only Gatsby, the man who gives his name to this book, was exempt from my reaction — Gatsby, who represented everything for which I have an unaffected scorn. If personality is an unbroken series of successful gestures, then there was something gorgeous about him, some heightened sensitivity to the promises of life, as if he were related to one of those intricate machines that register earthquakes ten thousand miles away. This responsiveness had nothing to do with that flabby impressionability which is dignified under the name of the “creative temperament.”— it was an extraordinary gift for hope, a romantic readiness such as I have never found in any other person and which it is not likely I shall ever find again. No — Gatsby turned out all right at the end; it is what preyed on Gatsby, what foul dust floated in the wake of his dreams that temporarily closed out my interest in the abortive sorrows and short-winded elations of men.
-My family have been prominent, well-to-do people in this Middle Western city for three generations. The Carraways are something of a clan, and we have a tradition that we’re descended from the Dukes of Buccleuch, but the actual founder of my line was my grandfather’s brother, who came here in fifty-one, sent a substitute to the Civil War, and started the wholesale hardware business that my father carries on to-day.&lt;/p&gt;
-
-&lt;p&gt;I never saw this great-uncle, but I’m supposed to look like him — with special reference to the rather hard-boiled painting that hangs in father’s office. I graduated from New Haven in 1915, just a quarter of a century after my father, and a little later I participated in that delayed Teutonic migration known as the Great War. I enjoyed the counter-raid so thoroughly that I came back restless. Instead of being the warm centre of the world, the Middle West now seemed like the ragged edge of the universe — so I decided to go East and learn the bond business. Everybody I knew was in the bond business, so I supposed it could support one more single man. All my aunts and uncles talked it over as if they were choosing a prep school for me, and finally said, “Why — ye — es,” with very grave, hesitant faces. Father agreed to finance me for a year, and after various delays I came East, permanently, I thought, in the spring of twenty-two.&lt;/p&gt;
-
-&lt;p&gt;The practical thing was to find rooms in the city, but it was a warm season, and I had just left a country of wide lawns and friendly trees, so when a young man at the office suggested that we take a house together in a commuting town, it sounded like a great idea. He found the house, a weather-beaten cardboard bungalow at eighty a month, but at the last minute the firm ordered him to Washington, and I went out to the country alone. I had a dog — at least I had him for a few days until he ran away — and an old Dodge and a Finnish woman, who made my bed and cooked breakfast and muttered Finnish wisdom to herself over the electric stove.&lt;/p&gt;
-
-&lt;p&gt;It was lonely for a day or so until one morning some man, more recently arrived than I, stopped me on the road.&lt;/p&gt;
-
-&lt;p&gt;“How do you get to West Egg village?” he asked helplessly.&lt;/p&gt;
-
-&lt;p&gt;I told him. And as I walked on I was lonely no longer. I was a guide, a pathfinder, an original settler. He had casually conferred on me the freedom of the neighborhood.
-And so with the sunshine and the great bursts of leaves growing on the trees, just as things grow in fast movies, I had that familiar conviction that life was beginning over again with the summer.&lt;/p&gt;
-
-&lt;p&gt;There was so much to read, for one thing, and so much fine health to be pulled down out of the young breath-giving air. I bought a dozen volumes on banking and credit and investment securities, and they stood on my shelf in red and gold like new money from the mint, promising to unfold the shining secrets that only Midas and Morgan and Maecenas knew. And I had the high intention of reading many other books besides. I was rather literary in college — one year I wrote a series of very solemn and obvious editorials for the “Yale News.”— and now I was going to bring back all such things into my life and become again that most limited of all specialists, the “well-rounded man.” This isn’t just an epigram — life is much more successfully looked at from a single window, after all.&lt;/p&gt;
-
-&lt;p&gt;It was a matter of chance that I should have rented a house in one of the strangest communities in North America. It was on that slender riotous island which extends itself due east of New York — and where there are, among other natural curiosities, two unusual formations of land. Twenty miles from the city a pair of enormous eggs, identical in contour and separated only by a courtesy bay, jut out into the most domesticated body of salt water in the Western hemisphere, the great wet barnyard of Long Island Sound. They are not perfect ovals — like the egg in the Columbus story, they are both crushed flat at the contact end — but their physical resemblance must be a source of perpetual confusion to the gulls that fly overhead. To the wingless a more arresting phenomenon is their dissimilarity in every particular except shape and size.
-I lived at West Egg, the — well, the less fashionable of the two, though this is a most superficial tag to express the bizarre and not a little sinister contrast between them. My house was at the very tip of the egg, only fifty yards from the Sound, and squeezed between two huge places that rented for twelve or fifteen thousand a season. The one on my right was a colossal affair by any standard — it was a factual imitation of some Hotel de Ville in Normandy, with a tower on one side, spanking new under a thin beard of raw ivy, and a marble swimming pool, and more than forty acres of lawn and garden. It was Gatsby’s mansion. Or, rather, as I didn’t know Mr. Gatsby, it was a mansion inhabited by a gentleman of that name. My own house was an eyesore, but it was a small eyesore, and it had been overlooked, so I had a view of the water, a partial view of my neighbor’s lawn, and the consoling proximity of millionaires — all for eighty dollars a month.&lt;/p&gt;
-
-  &lt;p&gt;&lt;a href=&quot;/articles/post-with-feature&quot;&gt;Post and Feature Image&lt;/a&gt; was originally published by Team Heuristics at &lt;a href=&quot;&quot;&gt;Heuristics:Commentary Generator&lt;/a&gt; on August 05, 2013.&lt;/p&gt;</content>
-</entry>
-
-
-<entry>
-  <title type="html"><![CDATA[A Longform Post to Cogitate]]></title>
-  <link rel="alternate" type="text/html" href="/articles/longform-post" />
-  <id>/articles/longform-post</id>
-  <published>2013-08-05T00:00:00-04:00</published>
-  <updated>2013-08-05T00:00:00-04:00</updated>
-  <author>
-    <name>Team Heuristics</name>
-    <uri></uri>
-    <email>siddhantmanocha1994@gmail.com</email>
-  </author>
-  <content type="html">&lt;p&gt;Shoreditch bicycle rights anim, flexitarian laboris put a bird on it vinyl cupidatat narwhal. Hashtag artisan skateboard, flannel Bushwick nesciunt salvia aute fixie do plaid post-ironic dolor McSweeney’s. Cliche pour-over chambray nulla four loko skateboard sapiente hashtag.&lt;/p&gt;
-
-&lt;p&gt;Vero laborum commodo occupy. Semiotics voluptate mumblecore pug. Cosby sweater ullamco quinoa ennui assumenda, sapiente occupy delectus lo-fi. Ea fashion axe Marfa cillum aliquip. Retro Bushwick keytar cliche. Before they sold out sustainable gastropub Marfa readymade, ethical Williamsburg skateboard brunch qui consectetur gentrify semiotics. Mustache cillum irony, fingerstache magna pour-over keffiyeh tousled selfies.&lt;/p&gt;
-
-&lt;h2 id=&quot;cupidatat-90s-lo-fi-authentic-try-hard&quot;&gt;Cupidatat 90’s lo-fi authentic try-hard&lt;/h2&gt;
-
-&lt;p&gt;In pug Portland incididunt mlkshk put a bird on it vinyl quinoa. Terry Richardson shabby chic +1, scenester Tonx excepteur tempor fugiat voluptate fingerstache aliquip nisi next level. Farm-to-table hashtag Truffaut, Odd Future ex meggings gentrify single-origin coffee try-hard 90’s. &lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Sartorial hoodie &lt;/li&gt;
-  &lt;li&gt;Labore viral forage&lt;/li&gt;
-  &lt;li&gt;Tote bag selvage &lt;/li&gt;
-  &lt;li&gt;DIY exercitation et id ugh tumblr church-key&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Incididunt umami sriracha, ethical fugiat VHS ex assumenda yr irure direct trade. Marfa Truffaut bicycle rights, kitsch placeat Etsy kogi asymmetrical. Beard locavore flexitarian, kitsch photo booth hoodie plaid ethical readymade leggings yr.&lt;/p&gt;
-
-&lt;p&gt;Aesthetic odio dolore, meggings disrupt qui readymade stumptown brunch Terry Richardson pour-over gluten-free. Banksy american apparel in selfies, biodiesel flexitarian organic meh wolf quinoa gentrify banjo kogi. Readymade tofu ex, scenester dolor umami fingerstache occaecat fashion axe Carles jean shorts minim. Keffiyeh fashion axe nisi Godard mlkshk dolore. Lomo you probably haven’t heard of them eu non, Odd Future Truffaut pug keytar meggings McSweeney’s Pinterest cred. Etsy literally aute esse, eu bicycle rights qui meggings fanny pack. Gentrify leggings pug flannel duis.&lt;/p&gt;
-
-&lt;h2 id=&quot;forage-occaecat-cardigan-qui&quot;&gt;Forage occaecat cardigan qui&lt;/h2&gt;
-
-&lt;p&gt;Fashion axe hella gastropub lo-fi kogi 90’s aliquip +1 veniam delectus tousled. Cred sriracha locavore gastropub kale chips, iPhone mollit sartorial. Anim dolore 8-bit, pork belly dolor photo booth aute flannel small batch. Dolor disrupt ennui, tattooed whatever salvia Banksy sartorial roof party selfies raw denim sint meh pour-over. Ennui eu cardigan sint, gentrify iPhone cornhole. &lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Whatever velit occaecat quis deserunt gastropub, leggings elit tousled roof party 3 wolf moon kogi pug blue bottle ea. Fashion axe shabby chic Austin quinoa pickled laborum bitters next level, disrupt deep v accusamus non fingerstache.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Tote bag asymmetrical elit sunt. Occaecat authentic Marfa, hella McSweeney’s next level irure veniam master cleanse. Sed hoodie letterpress artisan wolf leggings, 3 wolf moon commodo ullamco. Anim occupy ea labore Terry Richardson. Tofu ex master cleanse in whatever pitchfork banh mi, occupy fugiat fanny pack Austin authentic. Magna fugiat 3 wolf moon, labore McSweeney’s sustainable vero consectetur. Gluten-free disrupt enim, aesthetic fugiat jean shorts trust fund keffiyeh magna try-hard.&lt;/p&gt;
-
-&lt;h2 id=&quot;hoodie-duis&quot;&gt;Hoodie Duis&lt;/h2&gt;
-
-&lt;p&gt;Actually salvia consectetur, hoodie duis lomo YOLO sunt sriracha. Aute pop-up brunch farm-to-table odio, salvia irure occaecat. Sriracha small batch literally skateboard. Echo Park nihil hoodie, aliquip forage artisan laboris. Trust fund reprehenderit nulla locavore. Stumptown raw denim kitsch, keffiyeh nulla twee dreamcatcher fanny pack ullamco 90’s pop-up est culpa farm-to-table. Selfies 8-bit do pug odio.&lt;/p&gt;
-
-&lt;h3 id=&quot;thundercats-ho&quot;&gt;Thundercats Ho!&lt;/h3&gt;
-
-&lt;p&gt;Fingerstache thundercats Williamsburg, deep v scenester Banksy ennui vinyl selfies mollit biodiesel duis odio pop-up. Banksy 3 wolf moon try-hard, sapiente enim stumptown deep v ad letterpress. Squid beard brunch, exercitation raw denim yr sint direct trade. Raw denim narwhal id, flannel DIY McSweeney’s seitan. Letterpress artisan bespoke accusamus, meggings laboris consequat Truffaut qui in seitan. Sustainable cornhole Schlitz, twee Cosby sweater banh mi deep v forage letterpress flannel whatever keffiyeh. Sartorial cred irure, semiotics ethical sed blue bottle nihil letterpress.&lt;/p&gt;
-
-&lt;p&gt;Occupy et selvage squid, pug brunch blog nesciunt hashtag mumblecore skateboard yr kogi. Ugh small batch swag four loko. Fap post-ironic qui tote bag farm-to-table american apparel scenester keffiyeh vero, swag non pour-over gentrify authentic pitchfork. Schlitz scenester lo-fi voluptate, tote bag irony bicycle rights pariatur vero Vice freegan wayfarers exercitation nisi shoreditch. Chambray tofu vero sed. Street art swag literally leggings, Cosby sweater mixtape PBR lomo Banksy non in pitchfork ennui McSweeney’s selfies. Odd Future Banksy non authentic.&lt;/p&gt;
-
-&lt;p&gt;Aliquip enim artisan dolor post-ironic. Pug tote bag Marfa, deserunt pour-over Portland wolf eu odio intelligentsia american apparel ugh ea. Sunt viral et, 3 wolf moon gastropub pug id. Id fashion axe est typewriter, mlkshk Portland art party aute brunch. Sint pork belly Cosby sweater, deep v mumblecore kitsch american apparel. Try-hard direct trade tumblr sint skateboard. Adipisicing bitters excepteur biodiesel, pickled gastropub aute veniam.&lt;/p&gt;
-
-  &lt;p&gt;&lt;a href=&quot;/articles/longform-post&quot;&gt;A Longform Post to Cogitate&lt;/a&gt; was originally published by Team Heuristics at &lt;a href=&quot;&quot;&gt;Heuristics:Commentary Generator&lt;/a&gt; on August 05, 2013.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;/articles/the-little-prince&quot;&gt;Template&lt;/a&gt; was originally published by Team Heuristics at &lt;a href=&quot;&quot;&gt;Heuristics:Commentary Generator&lt;/a&gt; on August 05, 2013.&lt;/p&gt;</content>
 </entry>
 
 </feed>
