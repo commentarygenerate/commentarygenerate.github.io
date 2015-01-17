@@ -5,7 +5,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="/feed.xml" />
 <link rel="alternate" type="text/html" href="" />
-<updated>2015-01-16T16:55:03-05:00</updated>
+<updated>2015-01-17T04:35:24-05:00</updated>
 <id>/</id>
 <author>
   <name>Team Heuristics</name>
@@ -15,9 +15,9 @@
 
 
 <entry>
-  <title type="html"><![CDATA[Kindly add your posts]]></title>
-  <link rel="alternate" type="text/html" href="/articles/rcnn3" />
-  <id>/articles/rcnn3</id>
+  <title type="html"><![CDATA[Court Detection]]></title>
+  <link rel="alternate" type="text/html" href="/articles/rcnn5" />
+  <id>/articles/rcnn5</id>
   <published>2015-01-17T00:00:00-05:00</published>
   <updated>2015-01-17T00:00:00-05:00</updated>
   <author>
@@ -25,11 +25,80 @@
     <uri></uri>
     <email>siddhantmanocha1994@gmail.com</email>
   </author>
-  <content type="html">&lt;p&gt;I hereby request my fellow teammates Satya Narayana, Akshay Varun and Vanya Jauhal to add their blogs on the works they have been involved in to the website  :P&lt;/p&gt;
+  <content type="html">&lt;p&gt;Court Detection is crucial for obtaining informations and making inferences for a tennis match and generate interesting commentary.We took to the task of court detection with the following objectives.&lt;/p&gt;
 
-&lt;p&gt;More templates for the markdown files are present in the template folder.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Filter the players from other persons in the image&lt;/li&gt;
+  &lt;li&gt;Make inferences on the position of the players with respect to the court and the type of shot being 	played&lt;/li&gt;
+  &lt;li&gt;Filtering the frames which contain match sequence from the video&lt;/li&gt;
+&lt;/ul&gt;
 
-  &lt;p&gt;&lt;a href=&quot;/articles/rcnn3&quot;&gt;Kindly add your posts&lt;/a&gt; was originally published by Team Heuristics at &lt;a href=&quot;&quot;&gt;Heuristics:Commentary Generator&lt;/a&gt; on January 17, 2015.&lt;/p&gt;</content>
+&lt;p&gt;Court Detection was important but was a non trivial problem. We approached the problem in two different ways.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Finding straight lines in the image (Hough Transforms)&lt;/li&gt;
+  &lt;li&gt;Template Matching (Homographic Transforms)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;hough-transforms&quot;&gt;Hough Transforms&lt;/h3&gt;
+
+&lt;p&gt;We made an assumption that most distict white colored lines in a image of tennis match comes from the court. Applying specific filters on the S channel for HSV representation of the image, we were able to generate a binary image with distict court lines. We then applied morphology transformation, namely erosion and dilation successively to make the lines more prominent.Applying hough transform on the binary image gave the following results.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/d1.png&quot; alt=&quot;RCNN Results&quot; /&gt;
+&lt;img src=&quot;/images/d3.png&quot; alt=&quot;RCNN Results&quot; /&gt;
+&lt;img src=&quot;/images/d5.png&quot; alt=&quot;RCNN Results&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;As is evident from the results, the method did not give complete court lines and detected only a aprt of them. Also the method did not work in case of clay courts where the white lines were not too distict or there were white objects in the background.&lt;/p&gt;
+
+&lt;p&gt;We tried to resolve the first issue by picking up points on the detected lines and trying to find the best fit lines through these set of points. the horizontal lines were detected by constraints on the slope of fitted line but other two non parallel lines of the court could not be detected by this approach. So we tried to apply homographic transforms for the purpose.&lt;/p&gt;
+
+&lt;h3 id=&quot;homographic-transforms&quot;&gt;Homographic Transforms&lt;/h3&gt;
+
+&lt;p&gt;The tennis courts have the same shape but are captured by different cameras at different angles. Thus there must exist a transformation with respect to the scale and the rotation such that one tennis court can be obtained from the other. Thus we used homographic transforms or template matching for the purpose.This required us to fix a template and find the transformation of specific points on the template and find their location on a test image. &lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/template123.jpg&quot; alt=&quot;RCNN Results&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Template&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/d25.png&quot; alt=&quot;RCNN Results&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/d29.png&quot; alt=&quot;RCNN Results&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/d86.png&quot; alt=&quot;RCNN Results&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Results&lt;/p&gt;
+
+&lt;p&gt;Thus it is quite clear that clear inferences cannot be made regarding the court with homographic transformations as well. Thus we aim to combine the results of hough transforms with homographic transforms and try to obtain results from sequence of images rather than single image for better results.&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;/articles/rcnn5&quot;&gt;Court Detection&lt;/a&gt; was originally published by Team Heuristics at &lt;a href=&quot;&quot;&gt;Heuristics:Commentary Generator&lt;/a&gt; on January 17, 2015.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Object Detection with RCNN]]></title>
+  <link rel="alternate" type="text/html" href="/articles/rcnn4" />
+  <id>/articles/rcnn4</id>
+  <published>2015-01-17T00:00:00-05:00</published>
+  <updated>2015-01-17T00:00:00-05:00</updated>
+  <author>
+    <name>Team Heuristics</name>
+    <uri></uri>
+    <email>siddhantmanocha1994@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;Our project had started to progress after we had done all the background work, installed the required toolboxes and collected relevant data. &lt;/p&gt;
+
+&lt;p&gt;RCNN is the state of art visual object detection system, which uses the region proposals obtained via selective search with the convoluted neural networks.It is built upon the caffe deep learning framework. The toolbox is well documented and offers demo codes to demonstrate its usage. We utilised pre trained model which was trained on the imagenet dataset for the task of extracting tennis players from the video frames.&lt;/p&gt;
+
+&lt;p&gt;RCNN toolbox offers a demo code with the name rcnn_demo.m under the &lt;code&gt;examples&lt;/code&gt; foler. It makes a call to the function defined showboxes.m defined under the &lt;code&gt;vis&lt;/code&gt; folder. ImageNet dataset has a large number of objects with around 200 labelled class of objects with classes as &lt;code&gt;person&lt;/code&gt;, &lt;code&gt;racket&lt;/code&gt;,&lt;code&gt;ball&lt;/code&gt;, etc.The demo code returns the score of all the classes which may be found in the image together with the location of the bounding boxes around that object in the image.Since we were only interested in the person class we set a thrreshold on the score upto which regions will be reported and filtered the person class from other classes.&lt;/p&gt;
+
+&lt;p&gt;The results from RCNN were fairly accurate and are illustrated below.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/final2.png&quot; alt=&quot;RCNN Results&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;But since it detected a lot of extra regions for the person class, as the refree and the ball boys, we have to filter them out and extract precise information of the players only. Thus we took to our next objective of detecting the court which can filter the players from other persons present in the scene. Also, court detection gave information regarding the the players location with respect to the court, distiguish between frames with match sequence from other frames, and make other interesting inferences.&lt;/p&gt;
+
+
+  &lt;p&gt;&lt;a href=&quot;/articles/rcnn4&quot;&gt;Object Detection with RCNN&lt;/a&gt; was originally published by Team Heuristics at &lt;a href=&quot;&quot;&gt;Heuristics:Commentary Generator&lt;/a&gt; on January 17, 2015.&lt;/p&gt;</content>
 </entry>
 
 

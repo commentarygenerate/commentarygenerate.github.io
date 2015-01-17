@@ -1,15 +1,15 @@
 
 
 <meta charset="utf-8">
-<title>Kindly add your posts &#8211; Heuristics:Commentary Generator</title>
-<meta name="description" content="Urging the team members to add their posts">
+<title>Object Detection with RCNN &#8211; Heuristics:Commentary Generator</title>
+<meta name="description" content="Identify tennis players from a image frame obtained from a video of a tennis match ">
 <meta name="keywords" content="">
 
 
 <meta property="og:locale" content="en_US">
-<meta property="og:title" content="Kindly add your posts &#8211; Heuristics:Commentary Generator">
-<meta property="og:description" content="Urging the team members to add their posts">
-<meta property="og:url" content="/articles/rcnn3">
+<meta property="og:title" content="Object Detection with RCNN &#8211; Heuristics:Commentary Generator">
+<meta property="og:description" content="Identify tennis players from a image frame obtained from a video of a tennis match ">
+<meta property="og:url" content="/articles/rcnn4">
 <meta property="og:site_name" content="Heuristics:Commentary Generator">
 
 
@@ -88,18 +88,27 @@
       <article class="wrap post">
         <header class="post-header">
           <hgroup>
-            <h1>Kindly add your posts</h1>
+            <h1>Object Detection with RCNN</h1>
             <p class="date">Jan 17, 2015</p>
-            <p class="intro">Urging the team members to add their posts</p>
+            <p class="intro">Identify tennis players from a image frame obtained from a video of a tennis match </p>
           </hgroup>
         </header>
 
-        <p>I hereby request my fellow teammates Satya Narayana, Akshay Varun and Vanya Jauhal to add their blogs on the works they have been involved in to the website  :P</p>
+        <p>Our project had started to progress after we had done all the background work, installed the required toolboxes and collected relevant data. </p>
 
-<p>More templates for the markdown files are present in the template folder.</p>
+<p>RCNN is the state of art visual object detection system, which uses the region proposals obtained via selective search with the convoluted neural networks.It is built upon the caffe deep learning framework. The toolbox is well documented and offers demo codes to demonstrate its usage. We utilised pre trained model which was trained on the imagenet dataset for the task of extracting tennis players from the video frames.</p>
+
+<p>RCNN toolbox offers a demo code with the name rcnn_demo.m under the <code>examples</code> foler. It makes a call to the function defined showboxes.m defined under the <code>vis</code> folder. ImageNet dataset has a large number of objects with around 200 labelled class of objects with classes as <code>person</code>, <code>racket</code>,<code>ball</code>, etc.The demo code returns the score of all the classes which may be found in the image together with the location of the bounding boxes around that object in the image.Since we were only interested in the person class we set a thrreshold on the score upto which regions will be reported and filtered the person class from other classes.</p>
+
+<p>The results from RCNN were fairly accurate and are illustrated below.</p>
+
+<p><img src="/images/final2.png" alt="RCNN Results" /></p>
+
+<p>But since it detected a lot of extra regions for the person class, as the refree and the ball boys, we have to filter them out and extract precise information of the players only. Thus we took to our next objective of detecting the court which can filter the players from other persons present in the scene. Also, court detection gave information regarding the the players location with respect to the court, distiguish between frames with match sequence from other frames, and make other interesting inferences.</p>
 
 
-      <a class="share" href="https://twitter.com/intent/tweet?text=&quot;Kindly add your posts&quot;%20commentarygenerate.github.io/articles/rcnn3%20via%20&#64;" data-dnt="true">Share</a>
+
+      <a class="share" href="https://twitter.com/intent/tweet?text=&quot;Object Detection with RCNN&quot;%20commentarygenerate.github.io/articles/rcnn4%20via%20&#64;" data-dnt="true">Share</a>
       <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
       
@@ -132,17 +141,17 @@
         <p class="list-title">Recent Posts</p>
          <!-- for1 -->
             <li>
-              <span class="recent-title"><a href="/articles/rcnn3" title="Kindly add your posts">Kindly add your posts </a></span>
+              <span class="recent-title"><a href="/articles/rcnn5" title="Court Detection">Court Detection </a></span>
+              <span class="date">Jan 17, 2015</span>
+            </li>
+         <!-- for1 -->
+            <li>
+              <span class="recent-title"><a href="/articles/rcnn4" title="Object Detection with RCNN">Object Detection with RCNN </a></span>
               <span class="date">Jan 17, 2015</span>
             </li>
          <!-- for1 -->
             <li>
               <span class="recent-title"><a href="/articles/rcnn2" title="Caffe with RCNN Installation">Caffe with RCNN Installation </a></span>
-              <span class="date">Jan 17, 2015</span>
-            </li>
-         <!-- for1 -->
-            <li>
-              <span class="recent-title"><a href="/articles/rcnn" title="Start of a Wonderful Experience">Start of a Wonderful Experi... </a></span>
               <span class="date">Jan 17, 2015</span>
             </li>
         
