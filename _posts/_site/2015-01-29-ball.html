@@ -1,0 +1,24 @@
+<h3 id="why-is-there-a-separate-post-for-this">Why is there a separate post for this?</h3>
+<p>Observe a video of a tennis match and notice if you can see the ball at all times. The answer is no. Even our eyes- one of the finest visual detectors cannot keep track of the ball. This is because of two reasons:
+ *  The ball is a very small object compared to the other objects in the frame.
+ *  It moves very fast during a match sequece.
+All this made ball tracking a challenge.</p>
+
+<h3 id="initial-attempts">Initial attempts:</h3>
+<p>We had already had an amazing experience with the efficiency of RCNN. So we decided to give it a shot- and included the tennis ball in one of the classes that it should be detecting in the frame.
+The result? The ball could not be deteccted. </p>
+
+<h3 id="what-next">What next?</h3>
+<p>One of the key features that made the ball different from all the other objects in the frame was its fast motion. And that could be utilized to detect it. We started with using the Luke Kanade optical flow to see if the ball could be detected. Although this approach had one major flaw- it first tracks the object and then monitors its motion. And in most of the cases, the algorithm was not able to detect the ball in the first place.
+Luckily for us, we found an approach that gave significant weightage to the motion of the object in the detection process.</p>
+
+<p>Detecting of the position and velocity of the ball using Thomas Brox’s optical flow:
+The algorithm for optical flow by Thomas Brox took into account the high-speed motion of relatively smaller objects in the frame- something that no other optical flow manages. 
+So given two consecutive frames in a video, we can detect the speed and direction of motion of the large as well as the smaller objects. The output is observed in the optical flow wheel coloring scheme. 
+Here is the exact sequence of steps:
+ *  Break the video into its constituent frames.
+ *  Apply optical flow for pairwise frames, to obtain velocity map of the objects.
+ * Perform morphological processing on the obtained maps to retain the players and the ball. (Since the players and ball will have considerably high speed as compared to everything else on the court, we can threshhold the intensity of the velocity map.
+ * Using connected component analysis, obtain the ball (assuming it will be the component of the smallest area).
+ * Using the optical flow color wheel, obtain the direction and magnitude of the ball’s velocity.</p>
+

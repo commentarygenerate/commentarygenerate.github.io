@@ -1,0 +1,44 @@
+<p>Court Detection is crucial for obtaining informations and making inferences for a tennis match and generate interesting commentary.We took to the task of court detection with the following objectives.</p>
+
+<ul>
+  <li>Filter the players from other persons in the image</li>
+  <li>Make inferences on the position of the players with respect to the court and the type of shot being 	played</li>
+  <li>Filtering the frames which contain match sequence from the video</li>
+</ul>
+
+<p>Court Detection was important but was a non trivial problem. We approached the problem in two different ways.</p>
+
+<ul>
+  <li>Finding straight lines in the image (Hough Transforms)</li>
+  <li>Template Matching (Homographic Transforms)</li>
+</ul>
+
+<h3 id="hough-transforms">Hough Transforms</h3>
+
+<p>We made an assumption that most distict white colored lines in a image of tennis match comes from the court. Applying specific filters on the S channel for HSV representation of the image, we were able to generate a binary image with distinct court lines. We then applied morphology transformation, namely erosion and dilation successively to make the lines more prominent.Applying hough transform on the binary image gave the following results.</p>
+
+<p><img src="/images/d1.png" alt="RCNN Results" />
+<img src="/images/d3.png" alt="RCNN Results" />
+<img src="/images/d5.png" alt="RCNN Results" /></p>
+
+<p>As is evident from the results, the method did not give complete court lines and detected only a part of them. Also the method did not work in case of clay courts where the white lines were not too distict or there were white objects in the background.</p>
+
+<p>We tried to resolve the first issue by picking up points on the detected lines and trying to find the best fit lines through these set of points. The horizontal lines were detected by constraints on the slope of fitted line but other two non parallel lines of the court could not be detected by this approach. So we tried to apply homographic transforms.</p>
+
+<h3 id="homographic-transforms">Homographic Transforms</h3>
+
+<p>The tennis courts have the same shape but are captured by different cameras at different angles. Thus there must exist a transformation with respect to the scale and the rotation such that one tennis court can be obtained from the other. Under this asumption, we used homographic transforms or template matching.This required us to fix a template and find the transformation of specific points on the template and find their location on a test image. </p>
+
+<p><img src="/images/template123.jpg" alt="RCNN Results" /></p>
+
+<p>Template</p>
+
+<p><img src="/images/d25.png" alt="RCNN Results" /></p>
+
+<p><img src="/images/d29.png" alt="RCNN Results" /></p>
+
+<p><img src="/images/d86.png" alt="RCNN Results" /></p>
+
+<p>Results</p>
+
+<p>Thus it is quite clear that clear inferences cannot be made regarding the court with homographic transformations as well. Thus we aim to combine the results of hough transforms with homographic transforms and try to obtain results from sequence of images rather than single image for better results.</p>

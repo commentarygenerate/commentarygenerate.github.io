@@ -1,0 +1,10 @@
+<p>Caffe is the deep learning framework created by a Phd student at UC Berkeley. It is well documented and has easy installation instructions. Information on the framework can be found at http://caffe.berkeleyvision.org/ . But we had a different problem altogether. We were not provided sudo access on the GPU. As a results we cannot install any software as a root user. Fortunately, most of the dependencies as Blas, Open CV, Cuda libraries, etc were already installed. Three of the dependencies namely glog, gflag, lmdb were not installed and had to be installed from the source files. This took some time but was figured out.</p>
+
+<p>A lot of libraries were depreciated and required some workaround. Most of such errors were rectified step by step. We ran the installer and tried to correct the errors thrown during the installation. This required us to locate the new names for the missing files via <code>locate</code> command in linux and link them to the correct part via <code>ln -s destination source</code>.</p>
+
+<p>We used Anaconda for the python dependencies and this required us to include google.protobuf in python sys.path (search it present as installation of python 2.7 generally) which was shown to be missing. The issues page on github repositories provided specific help, for example: one such instance required us to rename the libm.so file in the lib folder in the anaconda python distribution.</p>
+
+<p>After caffe installation, the rcnn installation was pretty straightforward and we just cloned the repository and followed the steps mentioned.</p>
+
+<p>After much effort, we were able to install the caffe framework with rcnn and we could run our first cnn( convoluted neural net) code for object detection.</p>
+

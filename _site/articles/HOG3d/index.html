@@ -1,15 +1,15 @@
 
 
 <meta charset="utf-8">
-<title>Caffe with RCNN Installation &#8211; Heuristics:Commentary Generator</title>
-<meta name="description" content="How to install caffe with rcnn on a GPU without root access!">
+<title>Introduction to HOG3d features &#8211; Heuristics:Commentary Generator</title>
+<meta name="description" content="CMU Winter School Program-December 2014 NITK Surathkal">
 <meta name="keywords" content="">
 
 
 <meta property="og:locale" content="en_US">
-<meta property="og:title" content="Caffe with RCNN Installation &#8211; Heuristics:Commentary Generator">
-<meta property="og:description" content="How to install caffe with rcnn on a GPU without root access!">
-<meta property="og:url" content="/articles/rcnn2">
+<meta property="og:title" content="Introduction to HOG3d features &#8211; Heuristics:Commentary Generator">
+<meta property="og:description" content="CMU Winter School Program-December 2014 NITK Surathkal">
+<meta property="og:url" content="/articles/HOG3d">
 <meta property="og:site_name" content="Heuristics:Commentary Generator">
 
 
@@ -88,25 +88,55 @@
       <article class="wrap post">
         <header class="post-header">
           <hgroup>
-            <h1>Caffe with RCNN Installation</h1>
-            <p class="date">Jan 17, 2015</p>
-            <p class="intro">How to install caffe with rcnn on a GPU without root access!</p>
+            <h1>Introduction to HOG3d features</h1>
+            <p class="date">Jan 18, 2015</p>
+            <p class="intro">CMU Winter School Program-December 2014 NITK Surathkal</p>
           </hgroup>
         </header>
 
-        <p>Caffe is the deep learning framework created by a Phd student at UC Berkeley. It is well documented and has easy installation instructions. Information on the framework can be found at http://caffe.berkeleyvision.org/ . But we had a different problem altogether. We were not provided sudo access on the GPU. As a results we cannot install any software as a root user. Fortunately, most of the dependencies as Blas, Open CV, Cuda libraries, etc were already installed. Three of the dependencies namely glog, gflag, lmdb were not installed and had to be installed from the source files. This took some time but was figured out.</p>
+        <h3 id="desciption-and-usage-of-hog3d-features">Desciption and usage of HOG3d Features</h3>
+<p><img src="https://cloud.githubusercontent.com/assets/10415819/5792312/97c6b236-9f38-11e4-828d-c382d0155e49.png" alt="HOG3d" />
+This Blog is a basic introduction to we did for the Winter School program and our successes and failures.</p>
 
-<p>A lot of libraries were depreciated and required some workaround. Most of such errors were rectified step by step. We ran the installer and tried to correct the errors thrown during the installation. This required us to locate the new names for the missing files via <code>locate</code> command in linux and link them to the correct part via <code>ln -s destination source</code>.</p>
+<p>Our Idea was to create an AI System that can generate Automatic commentary for Tennis matches.</p>
 
-<p>We used Anaconda for the python dependencies and this required us to include google.protobuf in python sys.path (search it present as installation of python 2.7 generally) which was shown to be missing. The issues page on github repositories provided specific help, for example: one such instance required us to rename the libm.so file in the lib folder in the anaconda python distribution.</p>
+<p>We broke down the problem to few blocks so that we can divide the work amongst ourselves and work on the same.</p>
 
-<p>After caffe installation, the rcnn installation was pretty straightforward and we just cloned the repository and followed the steps mentioned.</p>
+<p>They were  as follows-</p>
 
-<p>After much effort, we were able to install the caffe framework with rcnn and we could run our first cnn( convoluted neural net) code for object detection.</p>
+<ul>
+  <li>
+    <p><strong>Player Detection</strong></p>
+  </li>
+  <li>
+    <p><strong>Action Recognition</strong></p>
+  </li>
+  <li>
+    <p><strong>Commentary generation</strong></p>
+  </li>
+</ul>
+
+<p>First we had to decide what features to use for detecting the action.This is a serious problem in Computer Vision.We went through few research papers and found that Calculation of local Spatio-Temporal Interest Points would be going forward in some direction.The Research paper is found <a href="http://www.irisa.fr/vista/Papers/2009_bmvc_wang.pdf">here</a></p>
+
+<p>Basically,it uses a combination of HOG3D(Histogram Of Gradients) and HOF(Histogram of Optical Flow) to detect some interest point which might be an indicator of the action performed by a person.</p>
+
+<p>The Code for calculating the STIP detector and descriptor can be found <a href="http://www.di.ens.fr/~laptev/download.html">here</a></p>
+
+<p>Although we managed to view a demo version of the code and see what it does(with help from <a href="http://web.michaelchughes.com/how-to/install-stip-software-with-opencv-v2">this</a> website ),we were unable to make changes to it since it was dependent on a much older version of OpenCV which was 2.3.The binaries are already compiled and they require the OpenCV libraries of that version.</p>
+
+<p>The Latest version is 3.0.0 and i was using the 2.4.9 version.So after installing required version as well,we were unable to make any sort of changes to it as it was leading to a build error when we used Cmake.</p>
+
+<p>Hence we dropped the idea of using STIP and tried using HOF Features and the details of which can be view in the blog post written by my friend.</p>
+
+<p>The Action Recognition requires calculation of large amounts of data and it seemed tedious and inefficient to track unnecessary movements such as player walking,ball-boys running etc.</p>
+
+<p>So,to increase the efficiency of the Action Recognition algorithm,we started working on the Audio Analysis of the input Video.The basic understanding is that actions such as serve and hit are performed only when the ball hits the racquet and this is accompanied by the ‘plopp!’ sound(Honestly i tried searching for the right word to describe the sound but i found this!Others may describe it as Pock!/Plock! whatever.Well you know what i am talking about anyways :D )</p>
+
+<p>If we can detect the time interval at which we know that sound is detected,then we can use that to increase the probability of our Action Recognition Algorithm’s results at that instant accordingly.</p>
 
 
 
-      <a class="share" href="https://twitter.com/intent/tweet?text=&quot;Caffe with RCNN Installation&quot;%20commentarygenerate.github.io/articles/rcnn2%20via%20&#64;" data-dnt="true">Share</a>
+      <a class="share" href="https://twitter.com/intent/tweet?text=&quot;Introduction to HOG3d features&quot;%20commentarygenerate.github.io/articles/HOG3d%20via%20&#64;" data-dnt="true">Share</a>
       <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
       

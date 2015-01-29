@@ -111,19 +111,19 @@
 
 <h3 id="hough-transforms">Hough Transforms</h3>
 
-<p>We made an assumption that most distict white colored lines in a image of tennis match comes from the court. Applying specific filters on the S channel for HSV representation of the image, we were able to generate a binary image with distict court lines. We then applied morphology transformation, namely erosion and dilation successively to make the lines more prominent.Applying hough transform on the binary image gave the following results.</p>
+<p>We made an assumption that most distict white colored lines in a image of tennis match comes from the court. Applying specific filters on the S channel for HSV representation of the image, we were able to generate a binary image with distinct court lines. We then applied morphology transformation, namely erosion and dilation successively to make the lines more prominent.Applying hough transform on the binary image gave the following results.</p>
 
 <p><img src="/images/d1.png" alt="RCNN Results" />
 <img src="/images/d3.png" alt="RCNN Results" />
 <img src="/images/d5.png" alt="RCNN Results" /></p>
 
-<p>As is evident from the results, the method did not give complete court lines and detected only a aprt of them. Also the method did not work in case of clay courts where the white lines were not too distict or there were white objects in the background.</p>
+<p>As is evident from the results, the method did not give complete court lines and detected only a part of them. Also the method did not work in case of clay courts where the white lines were not too distict or there were white objects in the background.</p>
 
-<p>We tried to resolve the first issue by picking up points on the detected lines and trying to find the best fit lines through these set of points. the horizontal lines were detected by constraints on the slope of fitted line but other two non parallel lines of the court could not be detected by this approach. So we tried to apply homographic transforms for the purpose.</p>
+<p>We tried to resolve the first issue by picking up points on the detected lines and trying to find the best fit lines through these set of points. The horizontal lines were detected by constraints on the slope of fitted line but other two non parallel lines of the court could not be detected by this approach. So we tried to apply homographic transforms.</p>
 
 <h3 id="homographic-transforms">Homographic Transforms</h3>
 
-<p>The tennis courts have the same shape but are captured by different cameras at different angles. Thus there must exist a transformation with respect to the scale and the rotation such that one tennis court can be obtained from the other. Thus we used homographic transforms or template matching for the purpose.This required us to fix a template and find the transformation of specific points on the template and find their location on a test image. </p>
+<p>The tennis courts have the same shape but are captured by different cameras at different angles. Thus there must exist a transformation with respect to the scale and the rotation such that one tennis court can be obtained from the other. Under this asumption, we used homographic transforms or template matching.This required us to fix a template and find the transformation of specific points on the template and find their location on a test image. </p>
 
 <p><img src="/images/template123.jpg" alt="RCNN Results" /></p>
 
@@ -173,18 +173,18 @@
         <p class="list-title">Recent Posts</p>
          <!-- for1 -->
             <li>
-              <span class="recent-title"><a href="/articles/rcnn5" title="Court Detection">Court Detection </a></span>
-              <span class="date">Jan 17, 2015</span>
+              <span class="recent-title"><a href="/articles/ball" title="Tennis Ball Detection and Tracking">Tennis Ball Detection and T... </a></span>
+              <span class="date">Jan 29, 2015</span>
             </li>
          <!-- for1 -->
             <li>
-              <span class="recent-title"><a href="/articles/rcnn4" title="Object Detection with RCNN">Object Detection with RCNN </a></span>
-              <span class="date">Jan 17, 2015</span>
+              <span class="recent-title"><a href="/articles/action" title="Recognizing actions in videos">Recognizing actions in videos </a></span>
+              <span class="date">Jan 19, 2015</span>
             </li>
          <!-- for1 -->
             <li>
-              <span class="recent-title"><a href="/articles/rcnn2" title="Caffe with RCNN Installation">Caffe with RCNN Installation </a></span>
-              <span class="date">Jan 17, 2015</span>
+              <span class="recent-title"><a href="/articles/HOF" title="Introduction to HOF features">Introduction to HOF features </a></span>
+              <span class="date">Jan 19, 2015</span>
             </li>
         
       </ol>

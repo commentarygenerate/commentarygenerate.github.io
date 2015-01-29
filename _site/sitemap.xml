@@ -6,6 +6,22 @@
 
     
     <url>
+        <loc>/articles/ball</loc>
+    </url>
+    
+    <url>
+        <loc>/articles/action</loc>
+    </url>
+    
+    <url>
+        <loc>/articles/HOF</loc>
+    </url>
+    
+    <url>
+        <loc>/articles/HOG3d</loc>
+    </url>
+    
+    <url>
         <loc>/articles/rcnn5</loc>
     </url>
     
@@ -19,10 +35,6 @@
     
     <url>
         <loc>/articles/rcnn</loc>
-    </url>
-    
-    <url>
-        <loc>/articles/the-little-prince</loc>
     </url>
     
 </urlset>

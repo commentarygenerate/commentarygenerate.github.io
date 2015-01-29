@@ -1,15 +1,15 @@
 
 
 <meta charset="utf-8">
-<title>Caffe with RCNN Installation &#8211; Heuristics:Commentary Generator</title>
-<meta name="description" content="How to install caffe with rcnn on a GPU without root access!">
+<title>Recognizing actions in videos &#8211; Heuristics:Commentary Generator</title>
+<meta name="description" content="Action recognition using HOG3D features provided by ACASVA team.">
 <meta name="keywords" content="">
 
 
 <meta property="og:locale" content="en_US">
-<meta property="og:title" content="Caffe with RCNN Installation &#8211; Heuristics:Commentary Generator">
-<meta property="og:description" content="How to install caffe with rcnn on a GPU without root access!">
-<meta property="og:url" content="/articles/rcnn2">
+<meta property="og:title" content="Recognizing actions in videos &#8211; Heuristics:Commentary Generator">
+<meta property="og:description" content="Action recognition using HOG3D features provided by ACASVA team.">
+<meta property="og:url" content="/articles/action">
 <meta property="og:site_name" content="Heuristics:Commentary Generator">
 
 
@@ -88,25 +88,26 @@
       <article class="wrap post">
         <header class="post-header">
           <hgroup>
-            <h1>Caffe with RCNN Installation</h1>
-            <p class="date">Jan 17, 2015</p>
-            <p class="intro">How to install caffe with rcnn on a GPU without root access!</p>
+            <h1>Recognizing actions in videos</h1>
+            <p class="date">Jan 19, 2015</p>
+            <p class="intro">Action recognition using HOG3D features provided by ACASVA team.</p>
           </hgroup>
         </header>
 
-        <p>Caffe is the deep learning framework created by a Phd student at UC Berkeley. It is well documented and has easy installation instructions. Information on the framework can be found at http://caffe.berkeleyvision.org/ . But we had a different problem altogether. We were not provided sudo access on the GPU. As a results we cannot install any software as a root user. Fortunately, most of the dependencies as Blas, Open CV, Cuda libraries, etc were already installed. Three of the dependencies namely glog, gflag, lmdb were not installed and had to be installed from the source files. This took some time but was figured out.</p>
+        <p>Hi guys.. What does a commentary contain? It mostly contains actions performed by players. So, Inorder to generate a commentary, recognizing actions is one of the most crucial thing. Actions? What actions are you talking about??? Right now we confined to 3 actions which states whether a player is serving the ball or hitting the ball or neither of them.  </p>
 
-<p>A lot of libraries were depreciated and required some workaround. Most of such errors were rectified step by step. We ran the installer and tried to correct the errors thrown during the installation. This required us to locate the new names for the missing files via <code>locate</code> command in linux and link them to the correct part via <code>ln -s destination source</code>.</p>
+<p>Ok. How are we going to recognize actions then! We are going to train an Autonomous system which on giving some motion based features of the video as input, outputs the action performed by players. Wait! What are motion based features? They are some kind of information extracted out of motion of various objects (I mean group of pixels) that can be understood by computer. There are several motion based features. Examples include Histogram of Optical Flow(HOF),  3D Histogram of Oriented Gradients (HOG3D). </p>
 
-<p>We used Anaconda for the python dependencies and this required us to include google.protobuf in python sys.path (search it present as installation of python 2.7 generally) which was shown to be missing. The issues page on github repositories provided specific help, for example: one such instance required us to rename the libm.so file in the lib folder in the anaconda python distribution.</p>
+<p>What next? Training the system to recognize actions. But that requires a dataset for supervising the system. We tried to find some datasets for tennis action recognition which contain input motion based features and their corresponding output. We found a dataset that was developed by ACASVA team. The dataset contains HOG3D features of bounding boxes drawn over players. It also contains corresponding actions of players. </p>
 
-<p>After caffe installation, the rcnn installation was pretty straightforward and we just cloned the repository and followed the steps mentioned.</p>
+<p>Hurray!!! Let’s start training then. But there is a small problem. The way in which the bounding boxes are drawn and the way in which HOG3D features are computed is not revealed in microdetails. Training it is not a problem since we have dataset. But, applying to a new video is a problem which requires computation of HOG3D features of new video. So, unfortunately this idea was dropped. </p>
 
-<p>After much effort, we were able to install the caffe framework with rcnn and we could run our first cnn( convoluted neural net) code for object detection.</p>
+<p>So, we need to start searching for more datasets or create the dataset on our own.</p>
+
+<p>Link to ACASVA dataset: http://www.cvssp.org/acasva/Downloads</p>
 
 
-
-      <a class="share" href="https://twitter.com/intent/tweet?text=&quot;Caffe with RCNN Installation&quot;%20commentarygenerate.github.io/articles/rcnn2%20via%20&#64;" data-dnt="true">Share</a>
+      <a class="share" href="https://twitter.com/intent/tweet?text=&quot;Recognizing actions in videos&quot;%20commentarygenerate.github.io/articles/action%20via%20&#64;" data-dnt="true">Share</a>
       <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
       

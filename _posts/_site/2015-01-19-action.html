@@ -1,0 +1,11 @@
+<p>Hi guys.. What does a commentary contain? It mostly contains actions performed by players. So, Inorder to generate a commentary, recognizing actions is one of the most crucial thing. Actions? What actions are you talking about??? Right now we confined to 3 actions which states whether a player is serving the ball or hitting the ball or neither of them.  </p>
+
+<p>Ok. How are we going to recognize actions then! We are going to train an Autonomous system which on giving some motion based features of the video as input, outputs the action performed by players. Wait! What are motion based features? They are some kind of information extracted out of motion of various objects (I mean group of pixels) that can be understood by computer. There are several motion based features. Examples include Histogram of Optical Flow(HOF),  3D Histogram of Oriented Gradients (HOG3D). </p>
+
+<p>What next? Training the system to recognize actions. But that requires a dataset for supervising the system. We tried to find some datasets for tennis action recognition which contain input motion based features and their corresponding output. We found a dataset that was developed by ACASVA team. The dataset contains HOG3D features of bounding boxes drawn over players. It also contains corresponding actions of players. </p>
+
+<p>Hurray!!! Let’s start training then. But there is a small problem. The way in which the bounding boxes are drawn and the way in which HOG3D features are computed is not revealed in microdetails. Training it is not a problem since we have dataset. But, applying to a new video is a problem which requires computation of HOG3D features of new video. So, unfortunately this idea was dropped. </p>
+
+<p>So, we need to start searching for more datasets or create the dataset on our own.</p>
+
+<p>Link to ACASVA dataset: http://www.cvssp.org/acasva/Downloads</p>
