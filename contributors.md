@@ -20,7 +20,7 @@ tags: [contributors, commentary,generator]
 |:-----------------:|:-----------:|
 | Siddhant Manocha              |Vanya Jauhal | 
 |:-----------------:|:-----------:|
-| IIT Kanpur              |IIT Hyderabad | 
+| IIT Kanpur              |IIIT Hyderabad | 
 
 
 
